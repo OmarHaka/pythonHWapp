@@ -9,7 +9,7 @@ pip install --upgrade pip virtualenv
 
 # Fetch source code
 export HOME=/root
-git clone https://github.com/GoogleCloudPlatform/getting-started-python.git /opt/app
+git clone https://github.com/OmarHaka/pythonHWapp.git /opt/app/gce
 
 
 # Account to own server process
@@ -21,7 +21,7 @@ virtualenv -p python3 /opt/app/gce/env
 /opt/app/gce/env/bin/pip install -r /opt/app/gce/requirements.txt
 
 # Set ownership to newly created account
-chown -R pythonapp:pythonapp /opt/app
+chown -R pythonapp:pythonapp /opt/app/gce
 
 # Put supervisor configuration in proper place
 cp /opt/app/gce/python-app.conf /etc/supervisor/conf.d/python-app.conf
